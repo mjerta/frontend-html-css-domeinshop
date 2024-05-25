@@ -93,7 +93,6 @@ body {
   border-bottom: 2px solid black;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
-  /*border: none;*/
   outline: none;
 }
 
@@ -226,6 +225,9 @@ blockquote::before {
       border-radius: 10px;
       color: white;
       background-color: #7b8d92;
+    }
+    &:last-of-type {
+      margin-bottom: 3rem;
     }
   }
 }
