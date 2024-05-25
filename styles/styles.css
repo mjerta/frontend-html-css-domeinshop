@@ -12,14 +12,13 @@ Table of Contents:
         3.5 Footer
 ////////////////////////////////////////////////////////////////////////*/
 /*#899CA0*/
-/*#1C2B32*/
 
 /*////////////////////////
     1. Global Styles
 ////////////////////////*/
 
 :root {
-  --default-spacing: .5rem;
+  --header-font-color: #1C2B32;
 }
 
 *, *::before, *::after {
@@ -29,59 +28,53 @@ Table of Contents:
 }
 
 h1, h2, h3 {
-  color: #1c2b32;
-  font-family: "Poppins", sans-serif;
+  color: var(--header-font-color);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
   overflow-x: hidden;
 }
 
-button, input {
-  font-family: "Poppins", sans-serif;
-}
 
 /*////////////////////////
     2. Typography
 ////////////////////////*/
 
+* {
+  font-family: "Poppins", Arial, sans-serif;
+}
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
 /*///////////// 3.1 Header /////////////*/
-header {
-  margin: 0 auto;
+.header-wrapper {
   max-width: 1000px;
-  height: 30rem;
+  margin: 0 auto;
   text-align: center;
+  height: 30rem;
   background-position: center;
   background-size: cover;
   background-image: url("../assets/images/mountains.jpg");
+
+  & p {
+    margin-bottom: 1rem;
+    font-size: .8rem;
+  }
+
+  & form {
+    width: 25rem;
+    height: 2.8rem;
+    margin: 0 auto;
+  }
 }
 
 #title {
   padding-top: 5.5rem;
   font-size: 4rem;
   line-height: 4rem;
-  margin-bottom: var(--default-spacing);
+  margin-bottom: .5rem;
 }
-
-header p {
-  margin-bottom: 1rem;
-  font-size: .8rem;
-}
-
-header form {
-  min-width: 400px;
-  width: 25rem;
-  /*width: 40vw;*/
-  height: 2.8rem;
-  margin: 0 auto;
-}
-
 
 .cta {
   font-size: .7rem;
@@ -92,7 +85,7 @@ header form {
   background-color: transparent;
   padding-left: 1rem;
   border: none;
-  width: 10rem;
+  width: 60%;
   height: 100%;
   color: #000;
   border-top: 2px solid black;
@@ -105,13 +98,13 @@ header form {
 }
 
 button.cta {
+  display: inline;
   width: 40%;
   background-color: #1c2b32;
   margin-left: -5px;
   height: 100%;
   border-top-right-radius: 80px 80px;
   border-bottom-right-radius: 80px 80px;
-  display: inline;
   border: none;
   border-top: 2px solid black;
   border-right: 2px solid black;
@@ -135,14 +128,11 @@ main h3 {
 
 
 .testimonial {
-  margin: 0 auto;
   height: auto;
   width: 80%;
-  /*border: 3px solid black;*/
   border-radius: 5px;
   box-shadow: 0px 4px 10px 4px rgba(128, 128, 128, .3);
-  /*box-shadow: -10px 10px 10px -5px rgba(0, 0, 0, 0.5), !* Left shadow *! 10px -10px 10px px rgba(0, 0, 0, 0.5); !* Right shadow *!*/
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
 }
 
 .testimonial:last-of-type {
@@ -153,29 +143,18 @@ blockquote {
   position: relative;
   padding: 3rem 4rem;
   font-size: .7rem;
-  text-align: start;
 
   & footer {
-    margin-top: var(--default-spacing);
-    /*background: red;*/
-    /*height: 60px;*/
-    /*margin: 0;*/
+    margin-top: .5rem;
   }
 
   & cite {
-    /*margin: auto;*/
-    /*padding: 10px;*/
     margin-left: 1rem;
-    /*display: inline-block;*/
-    /*height: 100%;*/
-    /*line-height: 100%;*/
-    vertical-align: middle;
   }
 
   & img {
     vertical-align: middle;
   }
-
 }
 
 blockquote::before {
@@ -205,12 +184,12 @@ blockquote::before {
 
   & p {
     font-size: .7rem;
-    padding: 1.2rem 0rem;
+    padding: 1.2rem 0;
   }
 
   & a {
     text-underline: black;
-    color: grey;
+    color: #899CA0;
   }
 
   & a:hover {
@@ -218,15 +197,12 @@ blockquote::before {
   }
 
   & button {
-    color: white;
     background-color: #1c2b32;
     padding: 1rem 1.4rem;
     font-size: .6rem;
+    color: white;
     border: none;
-    border-bottom-right-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    border-top-left-radius: 1.5rem;
+    border-radius: 1.5rem;
     cursor: pointer;
   }
 }
@@ -235,7 +211,6 @@ blockquote::before {
 /*///////////// 3.4 Faq /////////////*/
 
 .faq {
-
   width: 80%;
   margin: 0 auto;
 
